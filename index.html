@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+ 
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+ 
+</head>
+<body>
+
+ <div class="Navbar"> 
+    <div class="header">
+        <!-- <div class="logo">
+            Mayur
+        </div> -->
+       
+        <ul class="nav_list">
+            <i class="uil uil-times close"></i>
+            <li class="nav_item"><span class="nav_icon"> <i class="uil uil-user icon"></i></span><a href="#" class="nav_link"> Framework</a></li>
+            <li class="nav_item"><span class="nav_icon"> <i class="uil uil-desktop icon"></i></span><a href="#" class="nav_link"> Demos</a></li>
+            <li class="nav_item"><span class="nav_icon"> <i class="uil uil-graduation-cap icon"></i></span><a href="#" class="nav_link"> Resources</a></li>
+            <li class="nav_item"><span class="nav_icon">  <i class="uil uil-setting icon"></i> </span><a href="#" class="nav_link"> Documentation</a></li>
+        </ul>
+ 
+        <div class="header_btns">
+            <button class="btn white">LOG IN</button>
+            <button class="btn  black">SIGN UP</button>
+        </div>
+          
+        <i class="uil uil-draggabledots menu"></i>
+    </div>
+</div>
+
+<section class="banner">
+    <button class="btn black button start_btn">START QUIZ</button>
+
+
+
+
+    <div class="rules_popup">
+    <div class="popup_content">
+        <div class="popup_header">Some Rules of this Quiz</div>  
+        <div class="rules">
+            <label class="rule">1. You will have only <span style="color: rgb(61, 92, 228);">15 seconds</span> per each question.</label>
+            <label class="rule">2. Once you select your answer, it can't be undone.</label>
+            <label class="rule">3. You can't select any option once time goes off.</label>
+            <label class="rule">4. You can't exist from the Quiz while you're playing</label>
+            <label class="rule">5. You'll get points on the basis of your correct answers</label>
+        </div>
+        <div class="popup_footer">
+            <div class="footer_btns">
+                <button class="btn white exit_btn">Exit Quiz</button>
+                <button class="btn  black continue_btn">Continue</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div class="quiz_popup">
+        <div class="quiz_content">
+            <div class="quiz_header"> 
+                <div class="header_title">Awesome Quiz Application</div>
+                <div class="timer_count">
+                    <span class="timer_left">Timer left</span>
+                      <span class="time">15</span>
+                </div>
+            </div>  
+            <div class="quiz">
+                <div class="question">
+
+                </div> 
+                <div class="options">
+                    <!-- <div class="option"> <span> Hyper Text Markup language </span> <div class="icon tick"><i class="uil uil-check"></i></div></div>
+                    <div class="option"> <span> Hyper Text Markup language </span> <div class="icon  cross"><i class="uil uil-times"></i></div></div>
+                    <div class="option"> <span> Hyper Text Markup language </span> </div>
+                    <div class="option"> <span> Hyper Text Markup language </span> </div> -->
+                </div>
+            </div>
+            <div class="quiz_footer">
+                  <div class="total_queue">  
+                    
+                </div>
+                  <button class="btn black nextbtn">Next Que</button>
+            </div>
+        </div>
+        </div>
+
+
+   
+
+        <div class="result_popup">
+            <div class="result_content">
+                <div class="reward_img">
+                   <img src="reward.png" alt="" srcset="">
+                  </div>  
+
+                  <div class="complete_text">You have completed the Quiz!</div>
+                  <div class="score_text">
+                    <span>and sorry , you got only <p>2</p> out of <p>5</p></span>
+                  </div>
+                  <div class="buttons">
+                    <button class="btn">Replay Quiz</button>
+                    <button class="btn black">Quit Quiz</button>
+                  </div>
+            </div>
+
+            </div>
+</section>
+
+
+<script src="js/main.js"></script>
+<script src="js/questions.js"></script>
+</body>
+</html>
