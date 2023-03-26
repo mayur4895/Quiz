@@ -289,7 +289,7 @@ font-size: 1.1rem;
  .quiz_popup{
     position: fixed;
     width: 100%;
-    background-color: rgba(0,0,0,.1);
+    background-color: #1f66c4 ;
     padding: 10px 20px;
     border: 1px #af3535;
     height: 100%;
@@ -341,8 +341,19 @@ font-size: 1.1rem;
     padding: 8px;
     justify-content: space-between;
     width: 100%;
-    border-bottom: 1px solid #e1e1e1;
+   box-shadow:  0px 1px 3px rgba(0,0,0,.1);
     align-items: center;
+    position: relative;
+}
+
+
+.time_line{ 
+    background: #102035;
+    height: 3px;;
+    position: absolute;
+    bottom: 0;
+     left: 0;
+  
 }
 
 .header_title{
@@ -461,6 +472,12 @@ font-size: 1.1rem;
     font-weight: 600;
 }
  
+.nextbtn.active{
+    display:  block;
+}
+.nextbtn{
+    display: none;
+}
 
 
 
@@ -479,11 +496,16 @@ font-size: 1.1rem;
     justify-content: center;
     opacity: 0;
     pointer-events: none;
-    transform: translate(-50% ,-50%) scale(0.9);
+    transform:   scale(0.9);
     text-align: center;
      z-index: 98; 
  }
 
+ .result_popup.active{
+    opacity: 1;
+    pointer-events:  auto;
+    transform:   scale(1);
+ }
  
 .result_content{
    background-color: #fff;
