@@ -20,6 +20,26 @@ html{
     --text-light:#B4B4BC;
     --body-color:#ffffff;
     --header-height:5rem;
+
+    --big-font-size:2rem ;
+    --h1-font-size:1.5rem;
+    --h2-font-size:1.25rem;
+    --h3-font-size:1.125rem;
+    --normal-font-size:.938rem;
+    --small-font-size:.813rem;
+    --smaller-font-size:.75rem;  
+
+}
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size:3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size:1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size:.875rem ;
+        --smaller-font-size: .813rem;
+    }
 }
 
 
@@ -210,9 +230,9 @@ font-size: 1.1rem;
     left: 0;
     justify-content: center;
     text-align: center; 
-     opacity: 0;
-     pointer-events: none;
-     transform:  scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transform:  scale(0.9);
  
  }
 
@@ -231,13 +251,13 @@ font-size: 1.1rem;
  }
 
 
-
+ 
 
 
  .popup_content{
     background-color: #fff;
     padding: 10px 20px;
-    width: 500px;
+    width:  auto;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -247,6 +267,7 @@ font-size: 1.1rem;
     pointer-events: none;
     transform:  scale(0.9);
     transition: .5s;
+    margin-left: -.9rem;
  }
 
 
@@ -255,7 +276,7 @@ font-size: 1.1rem;
     border-bottom: 1px solid #e1e1e1;
     width: 100%;
     text-align: initial;
-    font-size: 1.3rem;
+    font-size:   var(--h1-font-size);
     font-weight: 600;
     color: var(--title-color);
  }
@@ -285,7 +306,7 @@ font-size: 1.1rem;
     width: 100%;   
  }
 
-
+/************************* quiz ----------------------------*/
  .quiz_popup{
     position: fixed;
     width: 100%;
@@ -323,9 +344,9 @@ font-size: 1.1rem;
 
  .quiz_content{
     background-color: #fff;
-    padding: 15px 25px;
-    width: 550px;
+    padding: 15px 25px; 
     height: auto;
+    width: 549px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -334,14 +355,15 @@ font-size: 1.1rem;
     pointer-events: none;
     transform:  scale(0.9);
     transition: .5s;
+    margin-left: -1rem;
  }
 
 .quiz_header{
     display: flex;
     padding: 8px;
     justify-content: space-between;
-    width: 100%;
-   box-shadow:  0px 1px 3px rgba(0,0,0,.1);
+   width: 100%;
+    box-shadow:  0px 1px 3px rgba(0,0,0,.1);
     align-items: center;
     position: relative;
 }
@@ -351,13 +373,13 @@ font-size: 1.1rem;
     background: #102035;
     height: 3px;;
     position: absolute;
-    bottom: 0;
-     left: 0;
+    bottom: 0;  
+    left: 5px;
   
 }
 
 .header_title{
-    font-size: 1.3rem;
+ 
 }
 .timer_left{
     color: #fff;

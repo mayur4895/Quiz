@@ -4,6 +4,7 @@ const menu = document.querySelector(".menu");
 const options = document.querySelector(".options");
 const timer_count = document.querySelector(".timer_count .time");
 const timeLine = document.querySelector(".time_line"); 
+const timer_left =document.querySelector(".timer_left"); 
  
 
 
@@ -59,9 +60,22 @@ const quitquiz = document.querySelector(".quit");
 quitquiz.onclick=()=>{
     window.location.reload();
 }
-restart_quiz.onclick=()=>{
+restart_quiz.onclick=()=>{ 
     quiz_popup.classList.add("activequiz"); 
     result_popup.classList.remove('active'); 
+    que_count = 0;
+    que_numb = 1;  
+    start_time = 15;
+    widthval = 0; 
+    userscore = 0;
+    showQuestions(que_count);
+    que_counter(que_numb);
+    clearInterval(counter);
+    startTimer(start_time);
+    clearInterval(counterLine);
+    startTimerLine(widthval);
+    nextbtn.classList.remove('active');
+    nextbtn.classList.remove('active');
 }
  
 
@@ -167,7 +181,19 @@ function startTimer(time){
      if(time < 0){
         clearInterval(counter);
         timer_count.innerText = "00";
-
+        timer_left.innerText = "Time off";
+        let alloptions = options.children.length; 
+        for(let i=0; i <alloptions ; i++){
+            if(options.children[i].innerText == questions[que_count].answer){
+                options.children[i].setAttribute("class","option correct");
+                userOption.insertAdjacentHTML("beforeend", crossicon);
+            } 
+            for(let i=0;i<alloptions;i++){
+                options.children[i].classList.add('disable');
+             }  
+             nextbtn.classList.add('active');  
+         }
+       
         
      }
     }
@@ -180,7 +206,7 @@ function startTimerLine(time){
     function  timer(){
         time += 1;
         timeLine.style.width = time + "px";
-     if(time > 549){
+     if(time >  549){
              clearInterval(counterLine);
      }
      
